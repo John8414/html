@@ -1,0 +1,281 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+img {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: none;
+}
+
+.carousel-height {
+  height: calc(320px + 25vw);
+  min-height: 400px;
+  max-height: 800px;
+}
+
+.overlay-80 {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 2;
+
+  &:nth-child(even) {
+    background-color: $yellow-primary;
+  }
+
+  &:nth-child(odd) {
+    background-color: $green-primary;
+  }
+}
+
+.overlay-60 {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.overlay-30 {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+}
+
+// FONT
+.text-80 {
+  font-size: clamp(8.8px, calc(8px + 3.75vw), 80px);
+  line-height: calc(4.8px + 4.75vw);
+}
+
+.text-60 {
+  font-size: calc(7.2px + 2.75vw);
+  line-height: calc(4.8px + 3.5vw);
+}
+
+.text-32 {
+  font-size: calc(8px + 1.25vw);
+  line-height: calc(6.72px + 1.65vw);
+}
+
+.text-20 {
+  font-size: calc(10.4px + 0.5vw);
+  line-height: calc(9.6px + 0.75vw);
+}
+
+.text-16 {
+  font-size: calc(8.8px + 0.375vw);
+  line-height: calc(8.16px + 0.575vw);
+}
+
+// COLORS
+.white-regular {
+  color: $white-regular;
+}
+
+.black-neutral {
+  color: $black-neutral;
+}
+
+.gray-neutral {
+  color: $gray-neutral
+}
+
+.gray-tertiary {
+  color: $gray-tertiary;
+}
+
+.green-dark {
+  color: $green-dark;
+}
+
+.green-primary {
+  color: $green-primary;
+}
+
+// SPACING
+.custome-container {
+  max-width: 1280px;
+  padding: calc(28.8px + 2.25vw) calc(9.6px - 0.5vw);
+  margin: 0 auto;
+}
+
+.container-sm {
+  padding: $psace-20 0;
+}
+
+.p-20 {
+  padding: $psace-20;
+}
+
+//SIZE
+
+.img-icon {
+  width: 35px;
+  height: 35px
+}
+
+.thumbnail {
+  width: calc(92.2px + 2.4375vw);
+  height: calc(92.2px + 2.4375vw);
+}
+
+.product-inview {
+  width: calc(271.8px + 10.0625vw);
+}
+
+.img-scale {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out;
+  }
+
+  &:hover {
+    cursor: zoom-in;
+
+    img {
+      transform: scale(1.6);
+    }
+  }
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.custome-carousel {
+  .indicators {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    right: 1rem;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .indicators-item {
+      width: 2px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      background-color: #676767;
+
+      &:active {
+        background-color: white !important;
+      }
+    }
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 2rem;
+
+    .caption-inner {
+      width: fit-content;
+      margin: auto;
+      text-align: center;
+
+    }
+
+    .arr-button {
+      background-color: transparent;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 2rem;
+      margin: 0 auto;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .item-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+  }
+}
+
+.bottom-line {
+  @include bottom-line(50%, 50%);
+
+  &::after {
+    transform: translateX(-50%);
+  }
+}
+
+.bottom-line-full {
+  @include bottom-line(100%, 0);
+}
+
+.item-border {
+  border: 1px solid $black-neutral;
+}

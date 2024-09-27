@@ -21,6 +21,10 @@ img {
   height: 100%;
 }
 
+a {
+  color: white;
+}
+
 button {
   border: none;
 }
@@ -29,21 +33,6 @@ button {
   height: calc(320px + 25vw);
   min-height: 400px;
   max-height: 800px;
-}
-
-.overlay-80 {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: 2;
-}
-.overlay-80:nth-child(even) {
-  background-color: rgba(151, 134, 64, 0.8);
-}
-.overlay-80:nth-child(odd) {
-  background-color: rgba(59, 89, 72, 0.8);
 }
 
 .overlay-60 {
@@ -233,9 +222,6 @@ button {
   width: 60px;
   height: 60px;
 }
-.custome-carousel .caption .arr-button a {
-  color: white;
-}
 .custome-carousel .item-overlay {
   position: absolute;
   width: 100%;
@@ -275,4 +261,52 @@ button {
 
 .item-border {
   border: 1px solid #010101;
+}
+
+.card-container {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.card-container:nth-child(even) .overlay {
+  background-color: rgba(151, 134, 64, 0.8);
+}
+.card-container:nth-child(odd) .overlay {
+  background-color: rgba(59, 89, 72, 0.8);
+}
+.card-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: calc(8px + 0.625vw);
+  text-align: left;
+}
+.card-container:hover .overlay {
+  opacity: 0.8;
+}
+
+.contact-section {
+  position: relative;
+  padding: calc(28.8px + 2.25vw) 0;
+  background-color: #3B5948;
+  height: calc(173.4px + 23.9375vw);
 }/*# sourceMappingURL=styles.css.map */

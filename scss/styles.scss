@@ -353,66 +353,79 @@ button {
 }
 
 header {
+  position: relative;
+  height: 172px;
+  width: 100%;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 88px;
+  .sticky-header {
+    position: fixed;
+    height: 172px;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+    border-bottom: 1px solid $black-neutral;
 
-    .search-header {
+    .header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      height: 88px;
 
-      .search-text {
-        cursor: pointer;
-        font-size: 16px;
-        display: inline-block;
-        transition: all 0.3s ease;
-      }
-
-      .search-input {
-        display: none;
-        padding: 5px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      &.active .search-text {
-        display: none;
-      }
-
-      &.active .search-input {
-        display: inline-block;
-      }
-    }
-
-    .icons-header {
-      display: flex;
-      justify-content: end;
-      gap: 20px;
-
-      .icon-item {
+      .search-header {
         display: flex;
         align-items: center;
-        gap: 5px;
-        font-size: 16px;
-        cursor: pointer;
+
+        .search-text {
+          cursor: pointer;
+          font-size: 16px;
+          display: inline-block;
+          transition: all 0.3s ease;
+        }
+
+        .search-input {
+          display: none;
+          padding: 5px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        &.active .search-text {
+          display: none;
+        }
+
+        &.active .search-input {
+          display: inline-block;
+        }
+      }
+
+      .icons-header {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+
+        .icon-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .info-header {
+      background-color: $green-dark;
+
+      .info-header-link {
+        &:hover {
+          color: $gray-subtext !important;
+          ;
+        }
       }
     }
   }
 
-  .info-header {
-    background-color: $green-dark;
-
-    .info-header-link {
-      &:hover {
-        color: $gray-subtext !important;
-        ;
-      }
-    }
-  }
 }
 
 .navbar {

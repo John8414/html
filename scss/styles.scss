@@ -13,15 +13,24 @@ h2,
 h3,
 h4,
 p,
-a,
-img {
+a {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: $green-dark;
+  }
 }
 
 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -84,6 +93,16 @@ button {
   line-height: calc(8.16px + 0.575vw);
 }
 
+.text-14 {
+  font-size: 14px;
+  line-height: 0%;
+}
+
+.text-12 {
+  font-size: 12px;
+  line-height: 0%;
+}
+
 // COLORS
 .white-regular {
   color: $white-regular;
@@ -101,6 +120,10 @@ button {
   color: $gray-tertiary;
 }
 
+.gray-subtext {
+  color: $gray-subtext;
+}
+
 .green-dark {
   color: $green-dark;
 }
@@ -116,7 +139,7 @@ button {
   margin: 0 auto;
 }
 
-.container-sm {
+.custome-container-sm {
   padding: $psace-20 0;
 }
 
@@ -322,4 +345,10 @@ button {
   padding: calc(28.8px + 2.25vw) 0;
   background-color: $green-dark;
   height: calc(173.4px + 23.9375vw);
+}
+
+.social-bg {
+  height: 32px;
+  width: 32px;
+  display: flex;
 }

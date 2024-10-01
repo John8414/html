@@ -3,6 +3,7 @@ body {
   margin: 0;
   height: 100vh;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -337,6 +338,13 @@ button {
   height: 32px;
   width: 32px;
   display: flex;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  text-decoration: none;
 }
 
 header {

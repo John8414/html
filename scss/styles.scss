@@ -6,6 +6,7 @@ body {
   margin: 0;
   height: 100vh;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -346,10 +347,18 @@ button {
   height: calc(173.4px + 23.9375vw);
 }
 
+// footer //
 .social-bg {
   height: 32px;
   width: 32px;
   display: flex;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  text-decoration: none;
 }
 
 header {

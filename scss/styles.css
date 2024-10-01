@@ -16,7 +16,6 @@ a {
 }
 
 a {
-  text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 a:hover {
@@ -338,4 +337,74 @@ button {
   height: 32px;
   width: 32px;
   display: flex;
+}
+
+header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+}
+header .header .search-header {
+  display: flex;
+  align-items: center;
+}
+header .header .search-header .search-text {
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+header .header .search-header .search-input {
+  display: none;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+header .header .search-header.active .search-text {
+  display: none;
+}
+header .header .search-header.active .search-input {
+  display: inline-block;
+}
+header .header .icons-header {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+header .header .icons-header .icon-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+header .info-header {
+  background-color: #3B5948;
+}
+header .info-header .info-header-link:hover {
+  color: #939393 !important;
+}
+
+.navbar {
+  height: 52px;
+}
+.navbar .nav-item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-item a {
+  text-decoration: none;
+}
+.navbar .nav-item::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #3B5948;
+  opacity: 0;
+  display: block;
+}
+.navbar .nav-item.active::after {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */

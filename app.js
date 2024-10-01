@@ -15,3 +15,8 @@ imageContainer.addEventListener('mousemove', (e) => {
 imageContainer.addEventListener('mouseleave', () => {
   img.style.transformOrigin = 'center center'; 
 });
+
+
+document.querySelector('.search-text').addEventListener('click', function() {
+  document.querySelector('.search-header').classList.add('active');
+});

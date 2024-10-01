@@ -19,7 +19,6 @@ a {
 }
 
 a {
-  text-decoration: none;
   transition: all .3s ease-in-out;
 
   &:hover {
@@ -351,4 +350,95 @@ button {
   height: 32px;
   width: 32px;
   display: flex;
+}
+
+header {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+
+    .search-header {
+      display: flex;
+      align-items: center;
+
+      .search-text {
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .search-input {
+        display: none;
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      &.active .search-text {
+        display: none;
+      }
+
+      &.active .search-input {
+        display: inline-block;
+      }
+    }
+
+    .icons-header {
+      display: flex;
+      justify-content: end;
+      gap: 20px;
+
+      .icon-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .info-header {
+    background-color: $green-dark;
+
+    .info-header-link {
+      &:hover {
+        color: $gray-subtext !important;
+        ;
+      }
+    }
+  }
+}
+
+.navbar {
+  height: 52px;
+
+  .nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    a {
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $green-dark;
+      opacity: 0;
+      display: block;
+    }
+
+    &.active {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }

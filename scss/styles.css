@@ -144,6 +144,11 @@ button {
   height: 35px;
 }
 
+.img-icon-large {
+  width: 100px;
+  height: 100px;
+}
+
 .thumbnail {
   width: calc(92.2px + 2.4375vw);
   height: calc(92.2px + 2.4375vw);
@@ -444,13 +449,13 @@ header .sticky-header .info-header .info-header-link:hover {
   background-color: #3B5948;
 }
 
-.product-slider,
+.slick-slider,
 .furniture-slider {
   width: 100%;
   margin: 0 auto;
 }
-.product-slider .product-item,
-.product-slider .furniture-item,
+.slick-slider .product-item,
+.slick-slider .furniture-item,
 .furniture-slider .product-item,
 .furniture-slider .furniture-item {
   text-align: center;

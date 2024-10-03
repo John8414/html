@@ -36,42 +36,56 @@ document.querySelector('.search-text').addEventListener('click', function() {
   document.querySelector('.search-header').classList.add('active');
 });
 
-// slick //
-$(document).ready(function(){
-  $('.product-slider').slick({
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    prevArrow: $('.prev-btn'), // Custom previous button
-    nextArrow: $('.next-btn'), // Custom next button
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+$(document).ready(function() {
+
+  // Initialize all sliders with the same class
+  $('.slick-slider').each(function() {
+    // Initialize Slick on each slider
+    $(this).slick({
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+    });
   });
+
+  // Custom Navigation
+  $('.prev-btn').on('click', function() {
+    var targetSlider = $(this).data('slider-id'); // Get the target slider ID
+    $('#' + targetSlider).slick('slickPrev');     // Target the slider by its ID and go to previous slide
+  });
+
+  $('.next-btn').on('click', function() {
+    var targetSlider = $(this).data('slider-id'); // Get the target slider ID
+    $('#' + targetSlider).slick('slickNext');     // Target the slider by its ID and go to next slide
+  });
+
 });

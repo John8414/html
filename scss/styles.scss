@@ -149,7 +149,12 @@ button {
 
 .img-icon {
   width: 35px;
-  height: 35px
+  height: 35px;
+}
+
+.img-icon-large {
+  width: 100px;
+  height: 100px;
 }
 
 .thumbnail {
@@ -480,7 +485,7 @@ header {
   }
 }
 
-.product-slider,
+.slick-slider,
 .furniture-slider {
   width: 100%;
   margin: 0 auto;

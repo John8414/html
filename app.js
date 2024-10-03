@@ -32,15 +32,13 @@ imageContainers.forEach((imageContainer) => {
 
 
 // add search input //
-document.querySelector('.search-text').addEventListener('click', function() {
-  document.querySelector('.search-header').classList.add('active');
-});
+// document.querySelector('.search-text').addEventListener('click', function() {
+//   document.querySelector('.search-header').classList.add('clicked');
+// });
 
 $(document).ready(function() {
 
-  // Initialize all sliders with the same class
   $('.slick-slider').each(function() {
-    // Initialize Slick on each slider
     $(this).slick({
       dots: true,
       infinite: false,
@@ -77,15 +75,34 @@ $(document).ready(function() {
     });
   });
 
-  // Custom Navigation
   $('.prev-btn').on('click', function() {
-    var targetSlider = $(this).data('slider-id'); // Get the target slider ID
-    $('#' + targetSlider).slick('slickPrev');     // Target the slider by its ID and go to previous slide
+    var targetSlider = $(this).data('slider-id');
+    $('#' + targetSlider).slick('slickPrev');    
   });
 
   $('.next-btn').on('click', function() {
-    var targetSlider = $(this).data('slider-id'); // Get the target slider ID
-    $('#' + targetSlider).slick('slickNext');     // Target the slider by its ID and go to next slide
+    var targetSlider = $(this).data('slider-id');
+    $('#' + targetSlider).slick('slickNext');    
   });
 
+});
+
+// Product outlet
+
+// tags
+const tags = document.querySelectorAll('.tag');
+
+tags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    tag.classList.toggle('clicked');
+  });
+});
+
+
+// reset clicked tags
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', () => {
+  tags.forEach(tag => {
+    tag.classList.remove('clicked');
+  });
 });

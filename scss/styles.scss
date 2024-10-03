@@ -515,3 +515,63 @@ header {
 .slick-next {
   display: none !important;
 }
+
+// Product Out let
+
+.tag {
+  background-color: white;
+  padding: 10px $psace-20;
+  cursor: pointer;
+  user-select: none;
+  transition: all .3s ease-in-out;
+  border: 1px solid $gray-subtext;
+
+  &:hover {
+    background-color: $green-primary;
+    color: white;
+  }
+
+  &.clicked {
+    background-color: $green-dark;
+    color: white;
+  }
+}
+
+.product-list {
+  column-gap: $psace-20;
+  row-gap: 40px;
+
+  .card-product,
+  .card-cta-bg {
+    max-width: 302px;
+    width: 302px;
+    height: 430px;
+    max-height: 420px;
+
+    .img-card-product {
+      width: 302px;
+      height: 292px;
+      object-fit: cover;
+    }
+  }
+
+  .card-cta-bg {
+    background-color: $yellow-primary;
+    opacity: .3s;
+  }
+
+  .card-cta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: $psace-20;
+    display: flex;
+    flex-direction: column;
+    row-gap: $psace-20;
+    align-items: center;
+    justify-content: center;
+  }
+}

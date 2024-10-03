@@ -336,6 +336,31 @@ button {
   background-color: #3B5948;
   height: calc(173.4px + 23.9375vw);
 }
+.contact-section .contact-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.3;
+}
+.contact-section .contact-cation {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(8px + 0.625vw);
+  height: 100%;
+  position: sticky;
+  z-index: 3;
+}
+.contact-section .contact-cation button {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.contact-section .contact-cation input {
+  padding: 15px calc(8px + 0.625vw);
+}
 
 .social-bg {
   height: 32px;

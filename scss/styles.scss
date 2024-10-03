@@ -346,6 +346,35 @@ button {
   padding: calc(28.8px + 2.25vw) 0;
   background-color: $green-dark;
   height: calc(173.4px + 23.9375vw);
+
+  .contact-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: .3;
+  }
+
+  .contact-cation {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $psace-20;
+    height: 100%;
+    position: sticky;
+    z-index: 3;
+
+    button {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    input {
+      padding: 15px $psace-20;
+    }
+  }
 }
 
 // footer //

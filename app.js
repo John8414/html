@@ -32,9 +32,9 @@ imageContainers.forEach((imageContainer) => {
 
 
 // add search input //
-// document.querySelector('.search-text').addEventListener('click', function() {
-//   document.querySelector('.search-header').classList.add('clicked');
-// });
+document.querySelector('.search-text').addEventListener('click', function() {
+  document.querySelector('.search-header').classList.add('clicked');
+});
 
 $(document).ready(function() {
 

@@ -30,11 +30,11 @@ imageContainers.forEach((imageContainer) => {
 });
 // Scale zoom in image //
 
-
+// còn dùng nhưng do trang khác ko có header nên đóng nhó
 // add search input //
-document.querySelector('.search-text').addEventListener('click', function() {
-  document.querySelector('.search-header').classList.add('clicked');
-});
+// document.querySelector('.search-text').addEventListener('click', function() {
+//   document.querySelector('.search-header').classList.add('clicked');
+// });
 
 $(document).ready(function() {
 
@@ -106,3 +106,12 @@ resetButton.addEventListener('click', () => {
     tag.classList.remove('clicked');
   });
 });
+
+// toggle minus and plus
+
+function toggleImage(button) {
+  const img = button.querySelector('img');
+    const plus = 'plus.svg';
+    const minus = 'minus.svg';
+    img.src = img.src.endsWith(plus) ? `images/${minus}` : `images/${plus}`;
+}

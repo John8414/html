@@ -566,6 +566,52 @@ header {
   }
 }
 
+.filter-collapse {
+  .filter-title {
+    @include bottom-line(100%, 0);
+
+    &:after {
+      background-color: $gray-neutral;
+    }
+  }
+
+  // width: 302px;
+  .form-check {
+    width: fit-content;
+
+    .form-check-input {
+      border-color: $gray-neutral ;
+
+      &:checked {
+        background-color: $black-neutral ;
+      }
+    }
+  }
+}
+
+// dropdown select
+.dropdown {
+  .dropdown-menu {
+    width: 219px;
+    right: 0 !important;
+    left: auto !important;
+
+    .form-check {
+      width: fit-content;
+
+      .form-check-input {
+        border-color: $gray-neutral ;
+
+        &:checked {
+          background-color: $black-neutral ;
+        }
+      }
+    }
+  }
+
+
+}
+
 .product-list {
   column-gap: $psace-20;
   row-gap: 40px;

@@ -561,6 +561,12 @@ header .sticky-header .info-header .info-header-link:hover {
 .dropdown .dropdown-menu .form-check .form-check-input:checked {
   background-color: #010101;
 }
+.dropdown .dropdown-menu .form-check:active .form-check-label {
+  color: #010101;
+}
+.dropdown .dropdown-menu .form-check:hover .form-check-label {
+  color: #010101;
+}
 
 .product-list {
   -moz-column-gap: calc(8px + 0.625vw);

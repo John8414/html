@@ -606,10 +606,20 @@ header {
           background-color: $black-neutral ;
         }
       }
+
+      &:active {
+        .form-check-label {
+          color: $black-neutral;
+        }
+      }
+
+      &:hover {
+        .form-check-label {
+          color: $black-neutral;
+        }
+      }
     }
   }
-
-
 }
 
 .product-list {

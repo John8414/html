@@ -115,3 +115,12 @@ function toggleImage(button) {
     const minus = 'minus.svg';
     img.src = img.src.endsWith(plus) ? `images/${minus}` : `images/${plus}`;
 }
+
+
+
+	
+//image picker
+function changeImage(imageSrc) {
+  document.getElementById("main-image").src = imageSrc;
+  console.log(imageSrc);
+}

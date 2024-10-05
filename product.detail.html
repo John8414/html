@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+  <!-- my css  -->
+  <link rel="stylesheet" href="./scss/styles.css">
+</head>
+
+<body>
+
+  <div class="custome-container">
+    <!-- Breadcrumd -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="text-14 gray-subtext breadcrumb-item"><a class="gray-subtext text-decoration-none"
+            href="#">FURNITURE</a>
+        </li>
+        <li class="text-14 gray-subtext breadcrumb-item"><a class="gray-subtext text-decoration-none" href="#">OUTLET
+            FUNITURE</a>
+        </li>
+        <li class="text-14 gray-subtext breadcrumb-item active" aria-current="page">SOFA</li>
+      </ol>
+    </nav>
+
+    <!-- product detail  -->
+    <div class="d-md-flex d-block gap-3 align-items-start justify-content-between">
+      <div class="w-100">
+        <div class="d-flex">
+          <div class="d-flex flex-column gap-3">
+            <img src="./images/chair.png" alt="Thumbnail 1" class="thumbnail"
+              onclick="changeImage('./images/chair.png')">
+            <img src="./images/sofa-gray.png" alt="Thumbnail 2" class="thumbnail"
+              onclick="changeImage('./images/sofa-gray.png')">
+            <img src="./images/sofa-green.png" alt="Thumbnail 3" class="thumbnail"
+              onclick="changeImage('./images/sofa-green.png')">
+            <img src="./images/sofa-3.png" alt="Thumbnail 4" class="thumbnail"
+              onclick="changeImage('./images/sofa-3.png')">
+          </div>
+
+          <div class="w-100">
+            <img id="main-image" src="./images/chair.png" alt="Main Image">
+          </div>
+        </div>
+
+      </div>
+      <div class="product-info">
+        <div>
+          <div class="d-flex justify-content-between align-items-start">
+            <h3 class="text-32 black-neutral">Muse Corner Sectional</h3>
+            <div>
+              <img src="./images/heart.svg" alt="">
+            </div>
+          </div>
+          <p class="text-20 gray-tertiary">Exclusive to Studio Collection</p>
+        </div>
+        <div class="d-flex flex-column gap-3 align-items-start">
+          <div class="d-flex align-items-end justify-content-start gap-3">
+            <p class="text-20 black-neutral">$500.00</p>
+            <p class="text-32 red-primary">$489.99</p>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-16 gray-subtext">N00-102</p>
+
+          <div class="d-flex align-items-center justify-content-start gap-2">
+            <p class="text-16 gray-subtext">
+              <span>3 </span>colors
+            </p>
+            <div class="d-flex align-items-center justify-content-center gap-2">
+              <button class="color-tags"></button>
+              <button class="color-tags"></button>
+              <button class="color-tags"></button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <p class="text-20 black-neutral pb-2">Reasons to buy</p>
+          <div class="d-flex align-items-center justify-content-start gap-3">
+            <p class="text-20 gray-tertiary">Available to ship in:<span>5 weeks </span></p>
+            <div class="tooltip-container">
+              <img src="./images/product-tooltip.svg" alt="">
+              <div class="tooltip text-20 gray-tertiary">Items will be shipped within 5 weeks from the date of your
+                order. Need more details?
+                Contact us!</div>
+            </div>
+          </div>
+          <p class="text-20 gray-tertiary">Save over on<span> $30 </span>shipping in Cambodia</p>
+        </div>
+        <div class="product-info-cta">
+          <h3 class="text-32 black-neutral pb-2">
+            Contact with us
+          </h3>
+          <p class="text-20 gray-subtext">
+            Leave your details, and we’ll reach out to assist with your purchase
+          </p>
+          <input placeholder="Email Address" class="text-16 p-2" type="text">
+          <button class="mx-auto text-20 black-neutral w-fit bottom-line-full">SEND YOUR EMAIL</button>
+        </div>
+        <div>
+          <h2 class="text-32 black-neutral bottom-line-full pb-2">
+            Product Highlights
+          </h2>
+
+          <!-- collapse detail -->
+          <button onclick="toggleImage(this)" class="w-100 text-20 fw-bold black-neutral d-flex justify-content-between align-items-center gap-1 custome-container-sm
+            type=" button" data-bs-toggle="collapse" data-bs-target="#collapse-detail" aria-expanded="false"
+            aria-controls="collapse-detail">detail
+            <div>
+              <img src="./images/plus.svg" alt="">
+            </div>
+          </button>
+
+          <div class="collapse multi-collapse" id="collapse-detail">
+            <div class="d-flex flex-column gap-3 bottom-line-full pb-3">
+              <p class="text-20 gray-subtext">Minimalist walnut wood sideboard by Studio Collection is crafted to
+                showcase
+                the natural beauty of the
+                wood. The sleek design contrasts sharp edges with gently tapered legs that curve gracefully at the base.
+                Topped with a polished marble slab for a refined finish featuring natural veining. Studio Collection
+                exclusive.</p>
+              <p class="text-20 gray-subtext">Raven 72" Walnut Wood Sideboard 72"Wx16"Dx30"H Designed by
+                <span class="fw-bold">Studio Collection</span>
+              </p>
+              <div class="list-dot">
+                <p class="text-20 gray-subtext">Solid walnut wood frame sustainably sourced</p>
+                <p class="text-20 gray-subtext">Walnut veneer</p>
+                <p class="text-20 gray-subtext">Polished marble top</p>
+                <p class="text-20 gray-subtext">Adjustable interior compartments</p>
+                <p class="text-20 gray-subtext">Each marble slab features unique veining for a one-of-a-kind look</p>
+              </div>
+            </div>
+          </div>
+          <!-- collapse Detail -->
+
+          <!-- collapse size -->
+          <button onclick="toggleImage(this)" class="w-100 text-20 fw-bold black-neutral d-flex justify-content-between align-items-center gap-1 custome-container-sm
+          type=" button" data-bs-toggle="collapse" data-bs-target="#collapse-size" aria-expanded="false"
+            aria-controls="collapse-size">size
+            <div>
+              <img src="./images/plus.svg" alt="">
+            </div>
+          </button>
+          <div class="collapse multi-collapse" id="collapse-size">
+            <div class="d-flex flex-column gap-3 bottom-line-full pb-3">
+              <div>
+                <img src="./images/size-img.png" alt="">
+              </div>
+              <div>
+                <p class="text-20 gray-subtext">Overall Dimensions</p>
+                <p class="text-20 gray-subtext">Width:80"</p>
+                <p class="text-20 gray-subtext">Depth:80"</p>
+                <p class="text-20 gray-subtext">Height:80"</p>
+              </div>
+              <div>
+                <p class="text-20 gray-subtext">Overall Dimensions</p>
+                <p class="text-20 gray-subtext">Width:80"</p>
+                <p class="text-20 gray-subtext">Depth:80"</p>
+                <p class="text-20 gray-subtext">Height:80"</p>
+              </div>
+            </div>
+          </div>
+          <!-- collapse size -->
+
+
+          <!-- collapse Warrant -->
+          <button onclick="toggleImage(this)" class="w-100 text-20 fw-bold black-neutral d-flex justify-content-between align-items-center gap-1 custome-container-sm
+          type=" button" data-bs-toggle="collapse" data-bs-target="#collapse-warrant" aria-expanded="false"
+            aria-controls="collapse-warrant">warrant
+            <div>
+              <img src="./images/plus.svg" alt="">
+            </div>
+          </button>
+          <div class="collapse multi-collapse" id="collapse-warrant">
+            <div class="d-flex flex-column gap-3 bottom-line-full pb-3">
+              <div>
+                <p class="text-20 gray-subtext">2-Year Warranty</p>
+                <p class="text-20 gray-subtext">Terms and conditions apply.
+                  <a class="text-20 gray-subtext" href="#">Learn more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- collapse Warrant -->
+
+          <!-- collapse brand -->
+          <button onclick="toggleImage(this)" class="w-100 text-20 fw-bold black-neutral d-flex justify-content-between align-items-center gap-1 custome-container-sm
+          type=" button" data-bs-toggle="collapse" data-bs-target="#collapse-brand" aria-expanded="false"
+            aria-controls="collapse-brand">Brand
+            <div>
+              <img src="./images/plus.svg" alt="">
+            </div>
+          </button>
+          <div class="collapse multi-collapse" id="collapse-brand">
+            <div class="d-flex flex-column gap-3 bottom-line-full pb-3">
+              <div>
+                <p class="text-20 gray-subtext">2-Year brandy</p>
+                <p class="text-20 gray-subtext">Terms and conditions apply.
+                  <a class="text-20 gray-subtext" href="#">Learn more</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- collapse brand -->
+        </div>
+
+      </div>
+    </div>
+    <!-- product detail  -->
+
+  </div>
+
+  <div class="custome-container">
+    <!-- section title -->
+    <div>
+      <h2 class="text-60 fw-normal black-neutral pb-2">
+        Discover more
+      </h2>
+    </div>
+    <div class="position-relative carousel-height w-100">
+      <img src="./images/carousel.jpg" alt="">
+      <div class="overlay-30"></div>
+    </div>
+    <div class="d-lg-flex align-items-center justify-content-between gap-3">
+      <div class="custome-container-sm">
+        <div class="img-scale">
+          <img src="./images/cate.png" alt="">
+        </div>
+        <div class="bottom-line-full w-fit pt-2">
+          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+        </div>
+      </div>
+      <div class="custome-container-sm">
+        <div class="img-scale">
+          <img src="./images/cate.png" alt="">
+        </div>
+        <div class="bottom-line-full w-fit pt-2">
+          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+        </div>
+      </div>
+      <div class="custome-container-sm">
+        <div class="img-scale">
+          <img src="./images/cate.png" alt="">
+        </div>
+        <div class="bottom-line-full w-fit pt-2">
+          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- slider -->
+  <div class="custome-container">
+    <div class="custome-container-sm">
+      <div class="d-flex justify-content-between">
+        <h4 class="text-32 fw-bold black-neutral">You may also like</h4>
+        <div class="custom-nav">
+          <button class="prev-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-prev.svg" alt="">
+          </button>
+          <button class="next-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-next.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slider custome-container-sm" id="slider2">
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider -->
+
+  <!-- slider -->
+  <div class="custome-container">
+    <div class="custome-container-sm">
+      <div class="d-flex justify-content-between">
+        <h4 class="text-32 fw-bold black-neutral">People Also Viewed</h4>
+        <div class="custom-nav">
+          <button class="prev-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-prev.svg" alt="">
+          </button>
+          <button class="next-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-next.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slider custome-container-sm" id="slider2">
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="d-flex flex-column justify-content-around align-items-start gap-3">
+          <div class="img-scale">
+            <img src="./images/chair.png" alt="">
+          </div>
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <p class="text-20 fw-medium text-black">$500.00</p>
+            <div><img src="./images/heart.svg" alt=""></div>
+          </div>
+          <p class="text-20 gray-tertiary">Scott 2 Seater Sofa</p>
+          <p class="text-20 gray-neutral">N00-102</p>
+          <p class="fw-medium text-20 gray-neutral">3 colors</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider -->
+  <!-- slider -->
+  <div class="custome-container">
+    <div class="custome-container-sm">
+      <div class="d-flex justify-content-between">
+        <h4 class="text-32 fw-bold black-neutral">More to Discover</h4>
+        <div class="custom-nav">
+          <button class="prev-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-prev.svg" alt="">
+          </button>
+          <button class="next-btn black-neutral" data-slider-id="slider2">
+            <img src="./images/arr-next.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="slick-slider custome-container-sm" id="slider2">
+      <div class="product-item">
+        <div class="custome-container-sm">
+          <div class="img-scale">
+            <img src="./images/cate.png" alt="">
+          </div>
+          <div class="bottom-line-full w-fit pt-2">
+            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="custome-container-sm">
+          <div class="img-scale">
+            <img src="./images/cate.png" alt="">
+          </div>
+          <div class="bottom-line-full w-fit pt-2">
+            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="custome-container-sm">
+          <div class="img-scale">
+            <img src="./images/cate.png" alt="">
+          </div>
+          <div class="bottom-line-full w-fit pt-2">
+            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- slider -->
+
+  <div class="contact-section">
+    <div class="contact-bg">
+      <img src="./images/owl.svg" alt="">
+    </div>
+    <!-- section title -->
+    <div class="contact-cation custome-container py-0">
+      <h2 class="text-60 fw-normal text-center text-white pb-2">
+        Stay in the loop
+      </h2>
+      <p class="text-20 text-center white-regular">
+        Sign up to be the first to hear about new arrivals, offers and events.Enter your email address below to opt in
+        to email marketing.
+      </p>
+      <input placeholder="Email Address" class="text-16" type="text">
+      <button class="text-20 text-white">SEND YOUR EMAIL</button>
+      <p class="text-16 white-regular mt-auto">See our full
+        <a href=" #">
+          Terms and Conditions,
+        </a>
+        <a href="#">
+          Privacy & Cookie Policy
+        </a>to find out more.
+      </p>
+    </div>
+  </div>
+  <!-- End Form -->
+
+  <!-- Start main Footer -->
+  <div class="custome-container">
+    <div class="w-fit h-100">
+      <a href="#" class="w-fit">
+        <img src="./images/logo.png" alt="">
+      </a>
+    </div>
+    <div
+      class="d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-start pt-lg-5 custome-container-sm">
+      <div class="d-flex flex-column gap-3 col-lg-4">
+        <a class="text-20 gray-tertiary text-decoration-none" href="#">HOME</a>
+        <a class="text-20 gray-tertiary text-decoration-none" href="#">FURNITURE </a>
+        <a class="text-20 gray-tertiary text-decoration-none" href="#">FURNITURE </a>
+        <a class="text-20 gray-tertiary text-decoration-none" href="#">FABRICS & WALL COVERINGS </a>
+        <a class="text-20 gray-tertiary text-decoration-none" href="#">FURNITURE </a>
+      </div>
+      <div class="d-lg-flex justify-content-between gap-5 col-lg-8">
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex flex-column gap-3">
+            <p class="text-12 gray-neutral">Contact Us</p>
+            <a class="text-20 black-neutral" href="tel:+85595231536">(+855) 95 231 536
+            </a>
+            <a class="text-20 black-neutral" href="tel:+85595231536">(+855) 95 231 536
+            </a>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <p class="text-12 gray-neutral">Location</p>
+            <p class="text-20 black-neutral">
+              Connexion, Ko Pich Street, Phum 14, Sangkat Tonle Bassac, Khan Chamkarmon, Phnom Penh, Cambodia
+            </p>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <p class="text-12 gray-neutral">Mo—Fr</p>
+            <p class="text-20 black-neutral">
+              9am—6pm
+            </p>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3 justify-content-center">
+          <p class="text-12 gray-neutral">Email</p>
+          <a href="mailto:Quynh@studiocollection.asia" class="text-20 black-neutral text-decoration-none">
+            Quynh@studiocollection.asia
+          </a>
+          <a href="mailto:Edgars@studiocollection.asia" class="text-20 black-neutral text-decoration-none">
+            Edgars@studiocollection.asia
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End main Footer -->
+
+  <!-- Start Social Links -->
+  <footer class="border-top border-secondary">
+    <div class="custome-container py-3">
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="d-flex gap-2">
+          <a class="text-14 gray-subtext" href="#">Terms and Conditions</a>
+          <p class="text-14 gray-subtext">© All rights reserved 2024 ©<a class="text-14 gray-subtext" href="#">Studio
+              Collection</a></p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center gap-3">
+          <div class="social-bg">
+            <a href="#" class="w-fit">
+              <img src="./images/twitter.svg" alt="">
+            </a>
+          </div>
+          <div class="social-bg">
+            <a href="#" class="w-fit">
+              <img src="./images/facebook.svg" alt="">
+            </a>
+          </div>
+          <div class="social-bg">
+            <a href="#" class="w-fit">
+              <img src="./images/linkedin.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Social Links -->
+    <a href="#" class="to-top">
+      <img src="./images/to-top.svg" alt="">
+    </a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- slick -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"></script>
+
+  <!-- My JS -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>

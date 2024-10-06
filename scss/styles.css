@@ -199,6 +199,11 @@ button {
   height: fit-content;
 }
 
+.w-628 {
+  width: calc(239.2px + 20.25vw);
+  max-width: 628px;
+}
+
 .custome-carousel .indicators {
   position: absolute;
   z-index: 2;
@@ -718,4 +723,17 @@ header .sticky-header .info-header .info-header-link:hover {
   background-color: #010101;
   left: -15px;
   top: 8px;
+}
+
+.contact-btn {
+  background-color: #3B5948;
+  transition: all 0.3s ease-in-out;
+  width: 290px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-btn:hover {
+  background-color: rgba(59, 89, 72, 0.8);
 }/*# sourceMappingURL=styles.css.map */

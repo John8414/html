@@ -19,6 +19,8 @@
 <body>
 
   <div class="custome-container">
+    <div class="pt-180"></div>
+
     <!-- Breadcrumd -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -34,24 +36,24 @@
 
     <!-- product detail  -->
     <div class="d-md-flex d-block gap-3 align-items-start justify-content-between">
-      <div class="w-100">
-        <div class="d-flex">
-          <div class="d-flex flex-column gap-3">
-            <img src="./images/chair.png" alt="Thumbnail 1" class="thumbnail"
-              onclick="changeImage('./images/chair.png')">
-            <img src="./images/sofa-2.png" alt="Thumbnail 2" class="thumbnail"
-              onclick="changeImage('./images/sofa-2.png')">
-            <img src="./images/sofa-1.png" alt="Thumbnail 3" class="thumbnail"
-              onclick="changeImage('./images/sofa-1.png')">
-            <img src="./images/sofa-3.png" alt="Thumbnail 4" class="thumbnail"
-              onclick="changeImage('./images/sofa-3.png')">
+      <div class="product-picker">
+        <div class="d-md-flex d-block image-picker gap-3">
+          <div class="d-flex flex-column gap-3 thumbnails">
+            <div class="item-border thumbnail ratio ratio-1x1">
+              <img src="images/sofa-1.png" alt="">
+            </div>
+            <div class="item-border thumbnail ratio ratio-1x1">
+              <img src="images/sofa-2.png" alt="">
+            </div>
+            <div class="item-border thumbnail ratio ratio-1x1">
+              <img src="images/sofa-3.png" alt="">
+            </div>
           </div>
 
-          <div class="w-100 img-scale">
-            <img id="main-image" src="./images/chair.png" alt="Main Image">
+          <div class="img-scale">
+            <img class="main-image" src="./images/sofa-4.png" alt="">
           </div>
         </div>
-
       </div>
       <div class="product-info">
         <div>
@@ -232,7 +234,7 @@
     <div class="d-lg-flex align-items-center justify-content-between gap-3">
       <div class="custome-container-sm">
         <div class="img-scale">
-          <img src="./images/cate.png" alt="">
+          <img src="./images/outlet-furniture.png" alt="">
         </div>
         <div class="bottom-line-full w-fit pt-2">
           <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
@@ -240,10 +242,10 @@
       </div>
       <div class="custome-container-sm">
         <div class="img-scale">
-          <img src="./images/cate.png" alt="">
+          <img src="./images/outdoor-furniture.png" alt="">
         </div>
         <div class="bottom-line-full w-fit pt-2">
-          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outdoor Funiture</a>
         </div>
       </div>
       <div class="custome-container-sm">
@@ -251,7 +253,7 @@
           <img src="./images/cate.png" alt="">
         </div>
         <div class="bottom-line-full w-fit pt-2">
-          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+          <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Project Funiture</a>
         </div>
       </div>
     </div>
@@ -263,20 +265,20 @@
       <div class="d-flex justify-content-between">
         <h4 class="text-32 fw-bold black-neutral">You may also like</h4>
         <div class="custom-nav">
-          <button class="prev-btn black-neutral" data-slider-id="slider2">
+          <button class="prev-btn black-neutral" data-slider-id="slider9">
             <img src="./images/arr-prev.svg" alt="">
           </button>
-          <button class="next-btn black-neutral" data-slider-id="slider2">
+          <button class="next-btn black-neutral" data-slider-id="slider9">
             <img src="./images/arr-next.svg" alt="">
           </button>
         </div>
       </div>
     </div>
-    <div class="slick-slider custome-container-sm" id="slider2">
+    <div class="slick-slider custome-container-sm" id="slider9">
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-1.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -289,8 +291,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-2.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -303,8 +305,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-3.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -317,8 +319,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-4.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -331,8 +333,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-1.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -345,8 +347,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-2.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -367,20 +369,20 @@
       <div class="d-flex justify-content-between">
         <h4 class="text-32 fw-bold black-neutral">People Also Viewed</h4>
         <div class="custom-nav">
-          <button class="prev-btn black-neutral" data-slider-id="slider2">
+          <button class="prev-btn black-neutral" data-slider-id="slider10">
             <img src="./images/arr-prev.svg" alt="">
           </button>
-          <button class="next-btn black-neutral" data-slider-id="slider2">
+          <button class="next-btn black-neutral" data-slider-id="slider10">
             <img src="./images/arr-next.svg" alt="">
           </button>
         </div>
       </div>
     </div>
-    <div class="slick-slider custome-container-sm" id="slider2">
+    <div class="slick-slider custome-container-sm" id="slider10">
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-1.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -393,8 +395,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-2.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -407,8 +409,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-3.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -421,8 +423,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-4.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -435,8 +437,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-1.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -449,8 +451,8 @@
       </div>
       <div class="slider-item">
         <div class="d-flex flex-column justify-content-around align-items-start gap-3">
-          <div class="img-scale">
-            <img src="./images/chair.png" alt="">
+          <div class="">
+            <img src="./images/sofa-2.png" alt="">
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <p class="text-20 fw-medium text-black">$500.00</p>
@@ -470,20 +472,20 @@
       <div class="d-flex justify-content-between">
         <h4 class="text-32 fw-bold black-neutral">More to Discover</h4>
         <div class="custom-nav">
-          <button class="prev-btn black-neutral" data-slider-id="slider2">
+          <button class="prev-btn black-neutral" data-slider-id="slider11">
             <img src="./images/arr-prev.svg" alt="">
           </button>
-          <button class="next-btn black-neutral" data-slider-id="slider2">
+          <button class="next-btn black-neutral" data-slider-id="slider11">
             <img src="./images/arr-next.svg" alt="">
           </button>
         </div>
       </div>
     </div>
-    <div class="slick-slider custome-container-sm" id="slider2">
+    <div class="slider-show-3 custome-container-sm" id="slider11">
       <div class="slider-item">
-        <div class="custome-container-sm">
+        <div class="custome <div class=" custome-container-sm">
           <div class="img-scale">
-            <img src="./images/cate.png" alt="">
+            <img src="./images/outlet-furniture.png" alt="">
           </div>
           <div class="bottom-line-full w-fit pt-2">
             <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
@@ -493,10 +495,10 @@
       <div class="slider-item">
         <div class="custome-container-sm">
           <div class="img-scale">
-            <img src="./images/cate.png" alt="">
+            <img src="./images/outdoor-furniture.png" alt="">
           </div>
           <div class="bottom-line-full w-fit pt-2">
-            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outdoor Funiture</a>
           </div>
         </div>
       </div>
@@ -506,11 +508,10 @@
             <img src="./images/cate.png" alt="">
           </div>
           <div class="bottom-line-full w-fit pt-2">
-            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Outlet Funiture</a>
+            <a class="text-32 black-neutral text-decoration-none w-fit" href="#">Project Funiture</a>
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!-- slider -->

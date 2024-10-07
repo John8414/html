@@ -1,5 +1,65 @@
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MTT Milano";
+  src: url("/fonts/MTTMilano-UltraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Type Firm MTT Milano Medium";
+  src: url("/fonts/Type Firm - MTT Milano Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Type Firm MTT Milano UltraBold";
+  src: url("/fonts/Type Firm - MTT Milano UltraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Type Firm MTT Milano";
+  src: url("/fonts/Type Firm - MTT Milano.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: "MTT Milano", sans-serif;
   margin: 0;
   height: 100vh;
   flex-direction: column;
@@ -15,6 +75,7 @@ p,
 a {
   padding: 0;
   margin: 0;
+  font-family: "MTT Milano", sans-serif;
 }
 
 a {
@@ -138,6 +199,10 @@ button {
 
 .custome-container-sm {
   padding: calc(8px + 0.625vw) 0;
+}
+
+.pt-180 {
+  padding-top: 180px;
 }
 
 .p-20 {
@@ -643,6 +708,15 @@ header .sticky-header .info-header .info-header-link:hover {
   flex-direction: column;
   row-gap: calc(8px + 0.625vw);
   background-color: rgba(59, 89, 72, 0.1019607843);
+}
+
+.product-picker .image-picker .thumbnail {
+  width: 85px;
+  height: 85px;
+}
+.product-picker .image-picker .img-scale {
+  width: calc(239.2px + 20.25vw);
+  max-width: 627px;
 }
 
 .tooltip-container {

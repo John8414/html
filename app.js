@@ -129,14 +129,14 @@ tags.forEach(tag => {
   });
 });
 
-
+// còn dùng nhưng do trang khác ko có nên tạm đóng nhó
 // reset clicked tags
-const resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', () => {
-  tags.forEach(tag => {
-    tag.classList.remove('clicked');
-  });
-});
+// const resetButton = document.getElementById('reset-button');
+// resetButton.addEventListener('click', () => {
+//   tags.forEach(tag => {
+//     tag.classList.remove('clicked');
+//   });
+// });
 
 // toggle minus and plus
 

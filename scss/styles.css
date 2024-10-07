@@ -303,7 +303,6 @@ button {
   width: 50%;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
 .card-container:nth-child(even) .overlay {
@@ -489,14 +488,11 @@ header .sticky-header .info-header .info-header-link:hover {
   width: 100%;
   margin: 0 auto;
 }
-.slick-slider .product-item,
-.slick-slider .furniture-item,
-.furniture-slider .product-item,
-.furniture-slider .furniture-item {
+.slick-slider .slider-item,
+.furniture-slider .slider-item {
   text-align: center;
   padding: 0 calc(8px + 0.625vw);
   background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slick-dots {
@@ -530,6 +526,11 @@ header .sticky-header .info-header .info-header-link:hover {
   color: white;
 }
 
+.filter-collapse {
+  width: 302px;
+  position: sticky;
+  top: 10rem;
+}
 .filter-collapse .filter-title {
   position: relative;
 }
@@ -641,6 +642,7 @@ header .sticky-header .info-header .info-header-link:hover {
   display: flex;
   flex-direction: column;
   row-gap: calc(8px + 0.625vw);
+  background-color: rgba(59, 89, 72, 0.1019607843);
 }
 
 .tooltip-container {

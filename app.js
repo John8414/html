@@ -38,6 +38,8 @@ imageContainers.forEach((imageContainer) => {
 
 $(document).ready(function() {
 
+
+  // Slider show 4//
   $('.slick-slider').each(function() {
     $(this).slick({
       dots: true,
@@ -75,6 +77,36 @@ $(document).ready(function() {
     });
   });
 
+  //Slider show 3//
+  $('.slider-show-3').each(function() {
+    $(this).slick({
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+    });
+  });
+
+
   $('.prev-btn').on('click', function() {
     var targetSlider = $(this).data('slider-id');
     $('#' + targetSlider).slick('slickPrev');    
@@ -87,7 +119,6 @@ $(document).ready(function() {
 
 });
 
-// Product outlet
 
 // tags
 const tags = document.querySelectorAll('.tag');
@@ -100,12 +131,12 @@ tags.forEach(tag => {
 
 
 // reset clicked tags
-// const resetButton = document.getElementById('reset-button');
-// resetButton.addEventListener('click', () => {
-//   tags.forEach(tag => {
-//     tag.classList.remove('clicked');
-//   });
-// });
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', () => {
+  tags.forEach(tag => {
+    tag.classList.remove('clicked');
+  });
+});
 
 // toggle minus and plus
 
@@ -116,15 +147,16 @@ function toggleImage(button) {
     img.src = img.src.endsWith(plus) ? `images/${minus}` : `images/${plus}`;
 }
 
+// toggle up and down
 
-
+function toggleImageUpDown(button) {
+  const img = button.querySelector('img');
+    const up = 'arr-down-thin.svg';
+    const down = 'arr-up-thin.svg';
+    img.src = img.src.endsWith(up) ? `images/${down}` : `images/${up}`;
+}
 	
 //image picker
-// function changeImage(imageSrc) {
-//   document.getElementById("main-image").src = imageSrc;
-// }
-
-
 
 document.querySelectorAll('.image-picker').forEach(picker => {
   const mainImage = picker.querySelector('.main-image');

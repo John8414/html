@@ -100,12 +100,12 @@ tags.forEach(tag => {
 
 
 // reset clicked tags
-const resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', () => {
-  tags.forEach(tag => {
-    tag.classList.remove('clicked');
-  });
-});
+// const resetButton = document.getElementById('reset-button');
+// resetButton.addEventListener('click', () => {
+//   tags.forEach(tag => {
+//     tag.classList.remove('clicked');
+//   });
+// });
 
 // toggle minus and plus
 
@@ -120,7 +120,20 @@ function toggleImage(button) {
 
 	
 //image picker
-function changeImage(imageSrc) {
-  document.getElementById("main-image").src = imageSrc;
-  console.log(imageSrc);
-}
+// function changeImage(imageSrc) {
+//   document.getElementById("main-image").src = imageSrc;
+// }
+
+
+
+document.querySelectorAll('.image-picker').forEach(picker => {
+  const mainImage = picker.querySelector('.main-image');
+  const thumbnails = picker.querySelectorAll('.thumbnails img');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      const newSrc = thumbnail.getAttribute('src');
+      mainImage.src = newSrc;
+    });
+  });
+});
